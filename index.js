@@ -98,7 +98,7 @@ function playSound(key) {
 function animate(currentKey) {
     var activeBtn;
     if (isNumber(currentKey)==false) {
-        activeBtn = document.querySelector("." + currentKey);
+       currentKey += ".";
     }
     else {
         switch (currentKey) {
@@ -118,8 +118,9 @@ function animate(currentKey) {
                 currentKey = ".seven";
                 break;
         }
-        activeBtn = document.querySelector(currentKey);
+        
     }
+    activeBtn = document.querySelector(currentKey);
     activeBtn.classList.add("pressed");
     
     setTimeout(function () {
