@@ -98,7 +98,7 @@ function playSound(key) {
 function animate(currentKey) {
     var activeBtn;
     if (isNumber(currentKey)==false) {
-       currentKey += ".";
+       currentKey = "." + currentKey;
     }
     else {
         switch (currentKey) {
