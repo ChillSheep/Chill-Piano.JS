@@ -35,7 +35,7 @@ footer {
 .whiteKey {
   outline: none;
   border: none;
-  font-size: 5rem;
+  font-size: 7.2rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;
@@ -50,7 +50,7 @@ footer {
 .blackKey {
   outline: none;
   border: none;
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;

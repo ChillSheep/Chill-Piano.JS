@@ -26,23 +26,24 @@ var six = new Audio("sounds/6.mp3");
 var y = new Audio("sounds/y.mp3");
 var seven = new Audio("sounds/7.mp3");
 var u = new Audio("sounds/u.mp3");
+var i = new Audio("sounds/i.mp3");
 
-for (var i=0; i<numberOfButtons; i++)
+for (var foo=0; foo<numberOfButtons; foo++)
 {
-    console.log("I entered with i="+i);
-    document.querySelectorAll("button")[i].addEventListener("click", function () {
+    document.querySelectorAll("button")[foo].addEventListener("click", function () {
         var btn = this.innerHTML;
-        playSound(btn);
+        playSound(btn.toLocaleLowerCase());
         animate(btn);
     });
 }
 
 document.addEventListener("keypress", function(event) {
-    playSound(event.key);
+    playSound(event.key.toLocaleLowerCase());
     animate(event.key);
 })
 
 function playSound(key) {
+    
     switch (key) {
         case "q":
             q.currentTime = 0;
@@ -91,6 +92,10 @@ function playSound(key) {
         case "u":
             u.currentTime = 0;
             u.play();
+            break;
+        case "i":
+            i.currentTime = 0;
+            i.play();
             break;
     }
 }
