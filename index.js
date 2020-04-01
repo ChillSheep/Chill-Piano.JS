@@ -33,7 +33,7 @@ for (var foo=0; foo<numberOfButtons; foo++)
     document.querySelectorAll("button")[foo].addEventListener("click", function () {
         var btn = this.innerHTML;
         playSound(btn.toLocaleLowerCase());
-        animate(btn);
+        animate(btn.toLocaleLowerCase());
     });
 }
 
